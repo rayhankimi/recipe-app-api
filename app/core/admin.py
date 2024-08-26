@@ -30,7 +30,7 @@ class UserAdmin(BaseUserAdmin):
     add_fieldsets = (
         (None, {
             'classes': ('wide',),  # Buat assign custom css classes, kalau ga nanti tampilannya agak jelek (sunnah)
-            'fields' : (
+            'fields': (
                 'email',
                 'password1',
                 'password2',
