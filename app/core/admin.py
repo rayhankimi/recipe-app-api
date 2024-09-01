@@ -15,7 +15,7 @@ class UserAdmin(BaseUserAdmin):
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
         (
-            _('Permissions'),  # Bakal ada field permission di admin, yang isinya dibawah itu, nanti bisa dicentang
+            _('Permissions'),
             {
                 'fields': (
                     'is_active',
@@ -24,12 +24,12 @@ class UserAdmin(BaseUserAdmin):
                 )
             }
         ),
-        (_('Important dates'), {'fields': ('last_login',)}),  # Bakal ada field important dates, yang isinya last login
+        (_('Important dates'), {'fields': ('last_login',)}),
     )
-    readonly_fields = ['last_login',]  # Nggak bisa dimodifikasi, sisanya bisa
+    readonly_fields = ['last_login', ]
     add_fieldsets = (
         (None, {
-            'classes': ('wide',),  # Buat assign custom css classes, kalau ga nanti tampilannya agak jelek (sunnah)
+            'classes': ('wide',),
             'fields': (
                 'email',
                 'password1',
